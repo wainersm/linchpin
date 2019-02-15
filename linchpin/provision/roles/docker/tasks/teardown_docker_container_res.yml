@@ -1,0 +1,8 @@
+---
+- name: Teardown Docker container
+  docker_container:
+    docker_host: "{{ output_res['resource_definition']['docker_host'] | default(default_docker_host) }}"
+    name: "{{ output_res['Config']['Hostname'] }}"
+    force_kill: "{{ output_res['resource_definition']['force_kill'] | default(default_force_kill) }}"
+    keep_volumes: "{{ output_res['resource_definition']['keep_volumes'] | default(default_keep_volumes) }}"
+    state: absent

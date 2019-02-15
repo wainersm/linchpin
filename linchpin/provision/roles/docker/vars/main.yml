@@ -1,0 +1,4 @@
+---
+default_docker_host: 'unix://var/run/docker.sock'
+default_force_kill: no
+default_keep_volumes: yes
