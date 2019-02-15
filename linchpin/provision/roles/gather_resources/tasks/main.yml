@@ -114,6 +114,11 @@
     topology_outputs: "{{ topology_outputs_ovirt_vms }}"
   when: topology_outputs_ovirt_vms is defined
 
+- name: "Add docker_container_res"
+  set_fact:
+    topology_outputs: "{{ topology_outputs + topology_outputs_docker_container }}"
+  when: topology_outputs_docker_container is defined and (topology_outputs_docker_container != [])
+
 - name: "set value"
   set_fact:
     value: "[{{ {'resources': topology_outputs } }}]"

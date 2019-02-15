@@ -41,6 +41,7 @@ setup(
         'docs': ["docutils", "sphinx", "sphinx_rtd_theme"],
         'tests': ["nose", "mock", "coverage", "flake8"],
         'libvirt': ["libvirt-python>=3.0.0", "lxml"],
+        'docker': ["docker-py>=1.7.0"],
     },
     zip_safe=False,
     packages=find_packages(),
