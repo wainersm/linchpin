@@ -27,6 +27,7 @@ filter_classes = {
     "os_server_res": OpenstackInventory,
     "ovirt_vms_res": OvirtInventory,
     "docker_container_res": DockerInventory,
+    "docker_image_res": DockerInventory,
 }
 
 formatter_classes = {
